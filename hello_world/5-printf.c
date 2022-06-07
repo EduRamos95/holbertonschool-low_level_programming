@@ -2,8 +2,8 @@
 
 /**
   * main - Entry point
-  * printf - Write the output under the control of a 
-  * format string that specifies how subsequent 
+  * printf - Write the output under the control of a
+  * format string that specifies how subsequent
   * arguments are converted for output. don't end with newline.
   * Return: Always 0 (Success)
   */

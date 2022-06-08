@@ -9,33 +9,34 @@
 
 int main(void)
 {
-	int dec1;
-	int unid1;
-	int dec2;
-	int unid2;
+	int num1;
+	int num2;
+	int d1;
+	int u1;
+	int d2;
+	int u2;
 
 	/*Your code goes there*/
-	for (dec1 = '0'; dec1 <= '9'; dec1++)
+	for (num1 = 0; num1 < 100; num1++)
 	{
-		for (unid1 = '0'; unid1 <= '9'; unid1++)
+		for (num2 = 0; num2 < 100; num2++)
 		{
-			for (dec2 = dec1; dec2 <= '9'; dec2++)
+			if (num1 < num2)
 			{
-				for (unid2 = (unid1 + 1); unid2 <= '9'; unid2++)
+				d1 = num1 / 10;
+				u1 = num1 % 10;
+				d2 = num2 / 10;
+				u2 = num2 % 10;
+				putchar(d1 + '0');
+				putchar(u1 + '0');
+				putchar(' ');
+				putchar(d2 + '0');
+				putchar(u2 + '0');
+				if (!(num1 == 98 && num2 == 99))
 				{
-					putchar(dec1);
-					putchar(unid1);
+					putchar(',');
 					putchar(' ');
-					putchar(dec2);
-					putchar(unid2);
-
-					if (!((dec1 == '9' && unid1 == '8') && (dec2 == '9' && unid2 == '9')))
-					{
-						putchar(',');
-						putchar(' ');
-					}
 				}
-				unid2 = '0';
 			}
 		}
 	}

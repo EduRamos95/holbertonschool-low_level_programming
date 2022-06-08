@@ -9,4 +9,10 @@
  */
 
 int _putchar(char c);
+
+/**
+ * print_alphabet - print the alphabet in loweracse
+ */
+
+void print_alphabet(void);
 #endif

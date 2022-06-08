@@ -6,6 +6,7 @@
   * Don't use type 'char', Only use putchar 8 times
   * Return: Always 0 (Success)
   */
+
 int main(void)
 {
 	int dec1, unid1, dec2, unid2;

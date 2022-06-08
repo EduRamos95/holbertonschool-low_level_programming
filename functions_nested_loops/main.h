@@ -18,4 +18,11 @@ void print_alphabet(void);
  * print_alphabet - print the alphabet 10 times in lowercase
  */
 void print_alphabet_x10(void);
+
+/**
+ * _islower - verify lowercase character
+ * @c: character to verify
+ * Return: 1 if lowrcase, 0 if uppercase
+ */
+int _islower(int c);
 #endif

@@ -32,7 +32,7 @@ int main(void)
 						putchar(' ');
 					}
 				}
-				unid2 = 0;
+				unid2 = '0';
 			}
 		}
 	}

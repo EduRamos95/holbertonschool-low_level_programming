@@ -9,7 +9,10 @@
 
 int main(void)
 {
-	int dec1, unid1, dec2, unid2;
+	int dec1;
+	int unid1;
+	int dec2;
+	int unid2;
 
 	/*Your code goes there*/
 	for (dec1 = '0'; dec1 <= '9'; dec1++)

@@ -16,7 +16,7 @@ int main(void)
 
 	num1 = 1;
 	num2 = 2;
-	cont_add = 0;
+	cont_add = 2;
 
 	while (num2 < 4000000)
 	{
@@ -26,9 +26,9 @@ int main(void)
 		num1 = num2;
 		num2 = add;
 		/*printf(", %ld", num1);*/
-		if (( num2 <= 4000000) && (num2 % 2 == 0))
+		if ((num2 <= 4000000) && (num2 % 2 == 0))
 			cont_add = cont_add + num2;
 	}
-	printf("%ld\n",cont_add);
+	printf("%ld\n", cont_add);
 	return (0);
 }

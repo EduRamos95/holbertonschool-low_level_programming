@@ -59,4 +59,10 @@ int print_last_digit(int dig);
  * Description: prints time 00:00 to 23:59
  */
 void jack_bauer(void);
+
+/**
+ * times_table - multiplex table
+ * Description: print munber in table.
+ */
+void times_table(void);
 #endif

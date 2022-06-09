@@ -74,7 +74,6 @@ void times_table(void);
   */
 int add(int Number1, int Number2);
 
-
  /**
   * print_to_98 - prints 'x' number to 98.
   * @n: This number is 'x' number
@@ -82,4 +81,10 @@ int add(int Number1, int Number2);
   */
 void print_to_98(int n);
 
+ /**
+  * print_times_table - Show table of multiplication of 'n'.
+  * Description: no show nothing is 'n' > 15 or 'n' < 0 .
+  * @n: table of 'n'
+  */
+void print_times_table(int n);
 #endif

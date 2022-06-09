@@ -8,7 +8,7 @@
 int print_last_digit(int dig)
 {
 	if (dig < 0)
-		dig = -dig;
+		dig = dig * -1;
 	_putchar('0' + (dig % 10));
 	return (dig % 10);
 }

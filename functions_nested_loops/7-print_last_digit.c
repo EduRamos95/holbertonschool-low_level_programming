@@ -7,8 +7,18 @@
  */
 int print_last_digit(int dig)
 {
-	if (dig < 0)
-		dig = dig * -1;
-	_putchar('0' + (dig % 10));
-	return (dig % 10);
+	int digX;
+
+	/*Your goes here*/
+	digX = dig % 10;
+	if (digX < 0)
+	{
+		_putchar(-digX + '0');
+		return (-digX);
+	}
+	else
+	{
+		_putchar(digX + '0');
+		return (digX);
+	}
 }

@@ -3,26 +3,26 @@
 
 /**
  * print_to_98 - prints 'x' number to 98.
- * @Num: This number is 'x' number
+ * @n: This number is 'x' number
  * Return: Always 0.
  */
-void print_to_98(int Num)
+void print_to_98(int n)
 {
 	/*For number 'x' less than 98 - need to increment*/
-	while (Num < 98)
+	while (n < 98)
 	{
-		printf("%d, ", Num);
-		Num++;
+		printf("%d, ", n);
+		n++;
 	}
 	/*For number 'x' greather than 98 - need to decrement*/
-	while (Num > 98)
+	while (n > 98)
 	{
-		printf("%d, ", Num);
-		Num--;
+		printf("%d, ", n);
+		n--;
 	}
 	/*If is  98 - in this case only print number without space*/
-	if (Num == 98)
+	if (n == 98)
 	{
-		printf("%d\n", Num);
+		printf("%d\n", n);
 	}
 }

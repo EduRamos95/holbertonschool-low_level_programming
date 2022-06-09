@@ -23,7 +23,6 @@ void print_to_98(int Num)
 	/*If is  98 - in this case only print number without space*/
 	if (Num == 98)
 	{
-		printf("%d", Num);
-		_putchar('\n');
+		printf("%d\n", Num);
 	}
 }

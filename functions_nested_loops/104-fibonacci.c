@@ -17,7 +17,7 @@ int main(void)
 	num1 = 1;
 	num2 = 2;
 
-	for (times = 0; times < 99; times++)
+	for (times = 0; times < 97; times++)
 	{
 		if (times == 0)
 			printf("%lu", num1);

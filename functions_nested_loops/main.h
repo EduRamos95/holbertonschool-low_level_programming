@@ -39,4 +39,11 @@ int _isalpha(int c);
  * Return: 1 if greater than zero, 0 if is zero, -1 if less than zero
  */
 int print_sign(int n);
+
+/**
+ * _abs - show absolute value of integer
+ * @abs: integer to converter
+ * Return: absolute value
+ */
+int _abs(int abs);
 #endif

@@ -46,4 +46,12 @@ int print_sign(int n);
  * Return: absolute value
  */
 int _abs(int abs);
+
+/**
+ * print_last_digit - print the last digit of number
+ * @dig: Number where extract the last digit
+ * Return: the Last number
+*/
+int print_last_digit(int dig);
+
 #endif

@@ -32,4 +32,11 @@ int _islower(int c);
  * Return: 1 if lowercase and uppercase, 0 if not alphabet
  */
 int _isalpha(int c);
+
+/**
+ * print_sign - print sign of number
+ * @n: number to verify
+ * Return: 1 if greater than zero, 0 if is zero, -1 if less than zero
+ */
+int print_sign(int n);
 #endif

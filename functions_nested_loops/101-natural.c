@@ -18,4 +18,5 @@ int main(void)
 		}
 	}
 	printf("%d\n", Add);
+	return (0);
 }

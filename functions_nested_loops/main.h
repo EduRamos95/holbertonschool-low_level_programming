@@ -65,4 +65,13 @@ void jack_bauer(void);
  * Description: print munber in table.
  */
 void times_table(void);
+
+ /**
+  * add - Calcule adition beetwen 2 numbers
+  *@Number1: number one
+  *@Number2: number two
+  * Return: Number1 + Number2 (adition)
+  */
+int add(int Number1, int Number2);
+
 #endif

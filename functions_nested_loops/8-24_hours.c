@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * jakc_bauer - Prints hour and minute of one day
+ * jack_bauer - Prints hour and minute of one day
  * Description: prints time 00:00 to 23:59
  */
 

@@ -55,7 +55,7 @@ int _abs(int abs);
 int print_last_digit(int dig);
 
 /**
- * jakc_bauer - Prints hour and minute of one day
+ * jack_bauer - Prints hour and minute of one day
  * Description: prints time 00:00 to 23:59
  */
 void jack_bauer(void);

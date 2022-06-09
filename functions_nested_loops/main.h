@@ -74,4 +74,12 @@ void times_table(void);
   */
 int add(int Number1, int Number2);
 
+
+ /**
+  * print_to_98 - prints 'x' number to 98.
+  * @Num: This number is 'x' number
+  * Return: Always 0.
+  */
+void print_to_98(int Num);
+
 #endif

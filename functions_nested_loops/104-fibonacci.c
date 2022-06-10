@@ -23,7 +23,6 @@ int main(void)
 
 	num1 = 1;
 	num2 = 1;
-
 	printf("%lu", num1);
 	for (times = 2; times < 93; times++) /*still works*/
 	{
@@ -33,24 +32,20 @@ int main(void)
 		printf(", %lu", add);
 	}
 	/*need artifice // part number in 2*/
-
 	head_1 = num1 / 1000000000;
 	tail_1 = num1 % 1000000000;
 	head_2 = num2 / 1000000000;
 	tail_2 = num2 % 1000000000;
-
 	for (; times < 99; times++)
 	{
 		over = (tail_1 + tail_2) / 1000000000;
 		tail_add = (tail_1 + tail_2) - (1000000000 * over);
 		head_add = (head_1 + head_2) + over;
-
 		printf(", %lu%lu", head_add, tail_add);
-
 		head_1 = head_2;
 		tail_1 = tail_2;
 		head_2 = head_add;
-		tail_2 = tail_add;	
+		tail_2 = tail_add;
 	}
 	printf("\n");
 	return (0);

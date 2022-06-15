@@ -9,9 +9,16 @@ int _putchar(char c);
 
 /**
  * _isupper - verify uppercase character
- * @c: character to verify
+ * @c: character to verify.
  * Return: 1 if is true, 0 if is false
  */
 int _isupper(int c);
+
+/**
+ * _isdigit - verify one digit 0-9
+ * @c: digit to verify
+ * Return: 1 if is true, 0 if is false
+ */
+int _isdigit(int c);
 
 #endif

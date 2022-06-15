@@ -43,4 +43,10 @@ void print_most_numbers(void);
  * more_numbers - print numbers 0-14 for 10 times
  */
 void more_numbers(void);
+
+/**
+ * print_line - draw a straight line in the terminal
+ * @n: number of characters to draw "_"
+ */
+void print_line(int n);
 #endif

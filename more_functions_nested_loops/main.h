@@ -49,4 +49,10 @@ void more_numbers(void);
  * @n: number of characters to draw "_"
  */
 void print_line(int n);
+
+/**
+ * print_diagonal - draws a diagonal line on the terminal
+ * @n: number of characteres to draw "\"
+ */
+void print_diagonal(int n);
 #endif

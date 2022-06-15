@@ -55,4 +55,11 @@ void print_line(int n);
  * @n: number of characteres to draw "\"
  */
 void print_diagonal(int n);
+
+/**
+ * print_square -  prints a square
+ * @size: size to dran "#"
+ */
+void print_square(int size);
+
 #endif

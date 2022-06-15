@@ -13,7 +13,7 @@ int main(void)
 	num = 612852475143;
 	div = 2;
 
-	while(div < num)
+	while (div < num)
 	{
 		if (num % div == 0)
 		{

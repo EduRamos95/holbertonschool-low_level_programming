@@ -68,4 +68,10 @@ void print_square(int size);
  */
 void print_triangle(int size);
 
+/**
+ * print_number - prints number only use _putchar
+ * @n: integer to print
+ */
+void print_number(int n);
+
 #endif

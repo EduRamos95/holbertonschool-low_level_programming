@@ -27,4 +27,10 @@ void swap_int(int *a, int *b);
  * Return: length of a string
  */
 int _strlen(char *s);
+
+/**
+ * _puts - prints a string, followed by a new line
+ * @str: address to print of value
+ */
+void _puts(char *str);
 #endif

@@ -9,10 +9,10 @@ int _strlen(char *s)
 {
 	int lenght;
 
-        lenght = 0;
+	lenght = 0;
 	/*'\0' it's refer to endline*/
-        while (*s != '\0')
-        {
+	while (*s != '\0')
+	{
 		lenght++;
 		s++;
 	}

@@ -17,7 +17,7 @@ char *cap_string(char *s)
 
 	while (s[i] != '\0') /*iterate through string*/
 	{
-		switch (n[i])
+		switch (s[i])
 		{
 			case ',':
 			case ';':
@@ -32,9 +32,9 @@ char *cap_string(char *s)
 			case ' ':
 			case '\n':
 			case '\t':
-				if (n[i + 1] >= 'a' && n[i + 1] <= 'z')
+				if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
 				{
-					n[i + 1] = n[i + 1] - 'a' + 'A';  
+					s[i + 1] = s[i + 1] - 'a' + 'A';
 				}
 		}
 		i++;

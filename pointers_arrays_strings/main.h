@@ -101,4 +101,12 @@ char *_strncat(char *dest, char *src, int n);
  * Return: copied string
  */
 char *_strncpy(char *dest, char *src, int n);
+
+/**
+ * _strcmp - compare to string
+ * @s1: one string
+ * @s2: second string
+ * Return: int that tells num spaces in between
+ */
+int _strcmp(char *s1, char *s2);
 #endif

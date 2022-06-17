@@ -138,7 +138,6 @@ char *cap_string(char *s);
  */
 char *leet(char *s);
 
-
 /**
  * _memset - fill n bytes of memory with a constant value
  * @s: pointer to memory area
@@ -147,4 +146,13 @@ char *leet(char *s);
  * Return: memory area
  */
 char *_memset(char *s, char b, unsigned int n);
+
+/**
+ * _memcpy - copy n bytes of memory from source to destination
+ * @dest: destination
+ * @src: source
+ * @n: number of bytes
+ * Return: pointer to dest
+ */
+char *_memcpy(char *dest, char *src, unsigned int n);
 #endif

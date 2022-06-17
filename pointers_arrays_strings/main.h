@@ -82,4 +82,14 @@ char *_strcpy(char *dest, char *src);
  * Return: new string
  */
 char *_strcat(char *dest, char *src);
+
+/**
+ * *_strncat - concatenates two strings,
+ * use at most n bytes from src
+ * @dest: string to rewrite
+ * @src: string to copy in other
+ * @n: number of bytes (char)
+ * Return: new string
+ */
+char *_strncat(char *dest, char *src, int n);
 #endif

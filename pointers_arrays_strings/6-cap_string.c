@@ -17,16 +17,26 @@ char *cap_string(char *s)
 
 	while (s[i] != '\0') /*iterate through string*/
 	{
-		/*if lowercase and prior char is separator, capitalize*/
-		if ((s[i] >= 'a' && s[i] <= 'z') &&
-				(s[i - 1] == ',' || s[i - 1] == ';' ||
-				 s[i - 1] == '.' || s[i - 1] == '!' ||
-				 s[i - 1] == '?' || s[i - 1] == '"' ||
-				 s[i - 1] == '(' || s[i - 1] == ')' ||
-				 s[i - 1] == '{' || s[i - 1] == '}' ||
-				 s[i - 1] == ' ' || s[i - 1] == '\t' ||
-				 s[i - 1] == '\n'))
-			 s[i] = s[i] - 'a' + 'A';
+		switch (n[i])
+		{
+			case ',':
+			case ';':
+			case '.':
+			case '!':
+			case '?':
+			case '"':
+			case '(':
+			case ')':
+			case '{':
+			case '}':
+			case ' ':
+			case '\n':
+			case '\t':
+				if (n[i + 1] >= 'a' && n[i + 1] <= 'z')
+				{
+					n[i + 1] = n[i + 1] - 'a' + 'A';  
+				}
+		}
 		i++;
 	}
 	return (s);

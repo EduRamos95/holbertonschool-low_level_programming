@@ -130,4 +130,11 @@ char *string_toupper(char *s);
  * Return: string
  */
 char *cap_string(char *s);
+
+/**
+ * *leet - encode string into 1337 leet
+ * @s: string to manipulate
+ * Return: string
+ */
+char *leet(char *s);
 #endif

@@ -132,11 +132,24 @@ char *string_toupper(char *s);
 char *cap_string(char *s);
 
 /**
+ * rot13 - encode string using rot13
+ * @s: string to encode
+ * Return: encoded string
+ */
+char *rot13(char *s);
+
+/**
  * *leet - encode string into 1337 leet
  * @s: string to manipulate
  * Return: string
  */
 char *leet(char *s);
+
+/**
+ * print_number - print an integer, without using long, arrays, or pointers
+ * @n: number to be printed
+ */
+void print_number(int n);
 
 /**
  * _memset - fill n bytes of memory with a constant value

@@ -189,4 +189,10 @@ char *_strpbrk(char *s, char *accept);
  * Return: pointer to index of string at first occurence of whole substring
  */
 char *_strstr(char *haystack, char *needle);
+
+/**
+ * print_chessboard - print chessboard given set 2D array
+ * @a: 2D array
+ */
+void print_chessboard(char (*a)[8]);
 #endif

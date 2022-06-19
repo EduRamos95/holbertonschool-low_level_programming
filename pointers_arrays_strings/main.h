@@ -202,4 +202,11 @@ void print_chessboard(char (*a)[8]);
  * @size: size of matrix
  */
 void print_diagsums(int *a, int size);
+
+/**
+ * set_string - set value of pointer to a char
+ * @s: variable of type pointer
+ * @to: char
+ */
+void set_string(char **s, char *to);
 #endif

@@ -161,7 +161,7 @@ char *_memcpy(char *dest, char *src, unsigned int n);
  * and returns pointer there
  * @s: string to search
  * @c: target characer
- * Return: pointer to that character in string
+ * Return: pointer to that character in string as
  */
 char *_strchr(char *s, char c);
 #endif

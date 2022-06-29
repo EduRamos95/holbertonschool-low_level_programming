@@ -35,7 +35,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		i = 0;
 		while (i < old_size)
 		{
-			*((char *)write + i) = *((char *)read + i);
+			*((void *)write + i) = *((void *)read + i);
 			i++;
 		}
 	}

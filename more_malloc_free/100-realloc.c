@@ -35,10 +35,10 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		i = 0;
 		while (i < old_size)
 		{
-			*((void *)write + i) = *((void *)read + i);
+			*(write + i) = *(read + i);
 			i++;
 		}
 	}
 	free(ptr);
-	return (newptr);
+	return ((char *)newptr);
 }

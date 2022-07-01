@@ -2,31 +2,31 @@
 #include "main.h"
 
 /**
- * _printstr - prints a string
+ * _prntstr - prints a string
  *
  * @s: string to print
  */
-void _printstr(char *s)
+void _prntstr(char *s)
 {
 	while (*s)
 		_putchar(*s++);
 }
 
 /**
- * num_str_chk - checks arg array to see if the are numeric strings, converts
+ * numstrchk - checks arg array to see if the are numeric strings, converts
  * from ascii to byte int, and returns their length. Segfault on null pointer.
  *
  * @s: string to check
  *
  * Return: Length of string. Exit 98 if not numeric.
  */
-long int num_str_chk(char *s)
+long int numstrchk(char *s)
 {
 	long int len = 0;
 
 	if (*s == 0)
 	{
-		_printstr("Error\n");
+		_prntstr("Error\n");
 		exit(98);
 	}
 
@@ -34,7 +34,7 @@ long int num_str_chk(char *s)
 	{
 		if (*s < '0' || *s > '9')
 		{
-			_printstr("Error\n");
+			_prntstr("Error\n");
 			exit(98);
 		}
 		*s -= '0';
@@ -100,27 +100,27 @@ char *trimzero(char *s)
  */
 int main(int ac, char **av)
 {
-	long int len1, len2, len_res, i, j;
+	long int len1, len2, lenres, i, j;
 	char *res;
 
 	if (ac != 3)
 	{
-		_printstr("Error\n");
+		_prntstr("Error\n");
 		return (98);
 	}
 	av[2] = trimzero(av[2]);
 	av[1] = trimzero(av[1]);
 	if (*av[1] == '0' || *av[2] == '0')
 	{
-		_printstr("0\n");
+		_prntstr("0\n");
 		return (0);
 	}
-	len1 = num_str_chk(av[1]);
-	len2 = num_str_chk(av[2]);
-	len_res = len1 + len2;
-	res = _calloc_buffer(len_res + 1, sizeof(char));
+	len1 = numstrchk(av[1]);
+	len2 = numstrchk(av[2]);
+	lenres = len1 + len2;
+	res = _calloc_buffer(lenres + 1, sizeof(char));
 
-	for (i = len_res - 1, len1--; len1 >= 0; len1--, i += len2 - 1)
+	for (i = lenres - 1, len1--; len1 >= 0; len1--, i += len2 - 1)
 		for (j = len2 - 1; j >= 0; j--, i--)
 		{
 			res[i] = (av[1][len1] * av[2][j] % 10) + res[i];
@@ -133,9 +133,9 @@ int main(int ac, char **av)
 		}
 
 	if (*res == '0')
-		_printstr(res + 1);
+		_prntstr(res + 1);
 	else
-		_printstr(res);
+		_prntstr(res);
 	_putchar('\n');
 	free(res);
 

@@ -1,143 +1,115 @@
-#include <stdlib.h>
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 /**
- * _prntstr - prints a string
+ * _isdigit - checks if character is digit
+ * @c: the character to check
  *
- * @s: string to print
+ * Return: 1 if digit, 0 otherwise
  */
-void _prntstr(char *s)
+int _isdigit(int c)
 {
-	while (*s)
-		_putchar(*s++);
+	return (c >= '0' && c <= '9');
 }
 
 /**
- * numstrchk - checks arg array to see if the are numeric strings, converts
- * from ascii to byte int, and returns their length. Segfault on null pointer.
+ * _strlen - returns the length of a string
+ * @s: the string whose length to check
  *
- * @s: string to check
- *
- * Return: Length of string. Exit 98 if not numeric.
+ * Return: integer length of string
  */
-long int numstrchk(char *s)
+int _strlen(char *s)
 {
-	long int len = 0;
+	int i = 0;
 
-	if (*s == 0)
-	{
-		_prntstr("Error\n");
-		exit(98);
-	}
+	while (*s++)
+		i++;
+	return (i);
+}
 
-	while (*s)
+/**
+ * big_multiply - multiply two big number strings
+ * @s1: the first big number string
+ * @s2: the second big number string
+ *
+ * Return: the product big number string
+ */
+char *big_multiply(char *s1, char *s2)
+{
+	char *r;
+	int l1, l2, a, b, c, x;
+
+	l1 = _strlen(s1);
+	l2 = _strlen(s2);
+	r = malloc(a = x = l1 + l2);
+	if (!r)
+		printf("Error\n"), exit(98);
+	while (a--)
+		r[a] = 0;
+
+	for (l1--; l1 >= 0; l1--)
 	{
-		if (*s < '0' || *s > '9')
+		if (!_isdigit(s1[l1]))
 		{
-			_prntstr("Error\n");
-			exit(98);
+			free(r);
+			printf("Error\n"), exit(98);
 		}
-		*s -= '0';
-		len++;
-		s++;
-	}
-	return (len);
-}
+		a = s1[l1] - '0';
+		c = 0;
 
-/**
- * _calloc_buffer - allocate a block of memory of size * num and init to '0'
- *
- * @num: number of elements to allocate
- * @size: size of element
- *
- * Return: pointer to allocated space, exit 98 on failure
- */
-void *_calloc_buffer(long int num, long int size)
-{
-	void *ret;
-	char *ptr;
-
-	ret = malloc(num * size);
-	if (ret == 0)
-	{
-		exit(98);
-	}
-
-	size = size * num;
-	ptr = ret;
-	ptr[--size] = 0;
-	while (size--)
-		ptr[size] = '0';
-
-	return (ret);
-}
-
-/**
- * trimzero - moves pointer position to after last leading 0 in a string,
- * or last zero if all zeros
- *
- * @s: char * we want to move
- *
- * Return: new position
- */
-char *trimzero(char *s)
-{
-	while (*s == '0')
-		if (*(s + 1) != 0)
-			s++;
-		else
-			break;
-	return (s);
-}
-
-/**
- * main - multiply two  positive integer strings of arbitrary size
- *
- * @ac: number of arguments
- * @av: arugments
- *
- * Return: 0 if successful, 98 if failure
- */
-int main(int ac, char **av)
-{
-	long int len1, len2, lenres, i, j;
-	char *res;
-
-	if (ac != 3)
-	{
-		_prntstr("Error\n");
-		return (98);
-	}
-	av[2] = trimzero(av[2]);
-	av[1] = trimzero(av[1]);
-	if (*av[1] == '0' || *av[2] == '0')
-	{
-		_prntstr("0\n");
-		return (0);
-	}
-	len1 = numstrchk(av[1]);
-	len2 = numstrchk(av[2]);
-	lenres = len1 + len2;
-	res = _calloc_buffer(lenres + 1, sizeof(char));
-
-	for (i = lenres - 1, len1--; len1 >= 0; len1--, i += len2 - 1)
-		for (j = len2 - 1; j >= 0; j--, i--)
+		for (l2 = _strlen(s2) - 1; l2 >= 0; l2--)
 		{
-			res[i] = (av[1][len1] * av[2][j] % 10) + res[i];
-			res[i - 1] = (av[1][len1] * av[2][j] / 10) + res[i - 1];
-			if (res[i] > '9')
+			if (!_isdigit(s2[l2]))
 			{
-				res[i] -= 10;
-				res[i - 1]++;
+				free(r);
+				printf("Error\n"), exit(98);
 			}
+			b = s2[l2] - '0';
+
+			c += r[l1 + l2 + 1] + (a * b);
+			r[l1 + l2 + 1] = c % 10;
+
+			c /= 10;
 		}
+		if (c)
+			r[l1 + l2 + 1] += c;
+	}
+	return (r);
+}
 
-	if (*res == '0')
-		_prntstr(res + 1);
-	else
-		_prntstr(res);
+
+/**
+ * main - multiply two big number strings
+ * @argc: the number of arguments
+ * @argv: the argument vector
+ *
+ * Return: Always 0 on success.
+ */
+int main(int argc, char **argv)
+{
+	char *r;
+	int a, c, x;
+
+	if (argc != 3)
+		printf("Error\n"), exit(98);
+
+	x = _strlen(argv[1]) + _strlen(argv[2]);
+	r = big_multiply(argv[1], argv[2]);
+	c = 0;
+	a = 0;
+	while (c < x)
+	{
+		if (r[c])
+			a = 1;
+		if (a)
+			_putchar(r[c] + '0');
+		c++;
+	}
+	if (!a)
+		_putchar('0');
 	_putchar('\n');
-	free(res);
-
+	free(r);
 	return (0);
 }

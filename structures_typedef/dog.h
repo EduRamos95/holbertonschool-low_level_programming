@@ -1,6 +1,12 @@
 #ifndef DOG_H
 #define DOG_H
 int _putchar(char c);
+
+/**
+ * dog_t - Typedef struct dog 
+ */
+typedef struct dog dog_t;
+
 /**
  * struct dog - structure for dogs
  * @name: name of dog

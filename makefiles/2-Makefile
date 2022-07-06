@@ -24,8 +24,8 @@ NAME = school
 #	$(CC) -c school.c -o school.o
 #-----------------------------------------
 
-#%.o: %.c
-#	$(CC) -c $< -o $@
+%.o: %.c
+	$(CC) -c -o $@ $<
 #-----------------------------------------
 #all: main.o school.o
 #	$(CC) -c main.o school.o -o $(NAME)

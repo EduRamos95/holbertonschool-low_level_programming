@@ -6,6 +6,8 @@ NAME = school
 HEADER = m.h
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
+.PHONY: clean oclean fclean all
+
 all: $(OBJ) $(HEADER)
 	$(CC) $(OBJ) -o $(NAME)
 
@@ -17,4 +19,4 @@ oclean:
 
 fclean: clean oclean
 
-re: oclean all
+re: oclean all 

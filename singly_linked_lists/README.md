@@ -4,7 +4,7 @@ Like arrays, Linked List is a linear data structure. Unlike arrays, linked list 
 <p align="center"><img src="https://cdn.programiz.com/sites/tutorial2program/files/linked-list-concept.png"></p>
 
 # Resources
-- Linked Lists: https://www.youtube.com/watch?v=udapt4FGY20&t=130s
+- <a href="https://www.youtube.com/watch?v=udapt4FGY20&t=130s" target="_blank"> Linked Lists </a>
 
 # Learning Objectives
 ## General

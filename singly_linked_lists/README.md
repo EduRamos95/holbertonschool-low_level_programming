@@ -59,5 +59,5 @@ typedef struct list_s
 - Compiler: gcc 9.4.0
 - Style guideline: <a href="https://github.com/holbertonschool/Betty/wiki" target="_blank"> Betty style </a>
 ---
-#Authors
-Edu Ramos
+# Authors
+- Edu Ramos

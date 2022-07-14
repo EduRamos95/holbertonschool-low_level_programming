@@ -3,16 +3,16 @@ Like arrays, Linked List is a linear data structure. Unlike arrays, linked list 
 
 <p align="center"><img src="https://cdn.programiz.com/sites/tutorial2program/files/linked-list-concept.png"></p>
 
-# Resources
+## Resources
 - <a href="https://www.youtube.com/watch?v=udapt4FGY20&t=130s" target="_blank"> Linked Lists </a>
 
-# Learning Objectives
-## General
+## Learning Objectives
+### General
 - When and why using linked lists vs arrays
 - How to build and use linked lists
 
-# Requirements
-## General
+## Requirements
+### General
 - Allowed editors: `vi`, `vim`, `emacs`
 - All your files will be compiled on Ubuntu 20.04 LTS using `gcc`, using the options `-Wall -Werror -Wextra -pedantic -std=gnu89`
 - All your files should end with a new line
@@ -28,7 +28,7 @@ Like arrays, Linked List is a linear data structure. Unlike arrays, linked list 
 - Don’t forget to push your header file
 - All your header files should be include guarded
 
-# More Info
+## More Info
 ```c
 /**
  * struct list_s - singly linked list
@@ -45,19 +45,19 @@ typedef struct list_s
     struct list_s *next;
 } list_t;
 ```
-
-# Description of file:
+---
+### Description of file:
 0. Print list: a function that prints all elements of a linked list --> `list_t`
 1. List length: a function that returns the number of elements in a linked list -->  `list_t`
 2. Add node: a function that adds a new node at the beginning of a linked list --> `list_t`
 3. Add node at the end: a function that adds a new node at the end of a list --> `list_t`
 4. Free list: a function that free a linked list --> `list_t`
 
-# Environment
+### Environment
 - Language: C
 - OS: Ubuntu 20.04 LTS
 - Compiler: gcc 9.4.0
 - Style guideline: <a href="https://github.com/holbertonschool/Betty/wiki" target="_blank"> Betty style </a>
 ---
-# Authors
+### Authors
 - Edu Ramos

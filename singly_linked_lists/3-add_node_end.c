@@ -14,11 +14,31 @@ int _strlen(const char *s)
 }
 
 /**
- * add_node - adds a node to the start of the list
+ * _strdup - recreation of string duplicate function
+ * @src: source of string to duplicate
+ * Return: pointer to malloc'd space with copied string
+ */
+void *_strdup(const char *src)
+{
+	int len, i;
+	char *new_str;
+
+	len = _strlen(src);
+	new_str = malloc((len + 1) * sizeof(char));
+	if (new_str == NULL)
+		return (NULL);
+	for (i = 0; src[i]; i++)
+		new_str[i] = src[i];
+	new_str[i] = '\0';
+	return (new_str);
+}
+
+/**
+ * add_node_end - adds a node in the end of the list
  * @head: address of pointer to head node
  * @str: str field of node
  *
- * Return: size of list
+ * Return: address of pointer to end element
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
@@ -30,17 +50,16 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	if (str != NULL)
 	{
-		new_end->str = strdup(str);
+		new_end->str = _strdup(str);
 		if (new_end->str == NULL)
 		{
 			free(new_end->str);
 			return (NULL);
 		}
-		new_end->len = strlen(new_end->str);
+		new_end->len = _strlen(new_end->str);
 	}
 	new_end->next = NULL;
-
-	if(*head == NULL) /*1st element on linked list*/
+	if (*head == NULL) /*1st element on linked list*/
 	{
 		*head = new_end;
 		return (*head);

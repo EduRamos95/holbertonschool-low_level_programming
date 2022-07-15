@@ -47,11 +47,11 @@ typedef struct list_s
 ```
 ---
 ### Description of file:
-0. Print list: a function that prints all elements of a linked list --> `list_t`
-1. List length: a function that returns the number of elements in a linked list -->  `list_t`
-2. Add node: a function that adds a new node at the beginning of a linked list --> `list_t`
-3. Add node at the end: a function that adds a new node at the end of a list --> `list_t`
-4. Free list: a function that free a linked list --> `list_t`
+- 0-print_list: a function that prints all elements of a linked list.
+- 1-list_length: a function that returns the number of elements in a linked list.
+- 2-add_node: a function that adds a new node at the beginning of a linked list.
+- 3-add_node_end: a function that adds a new node at the end of a list.
+- 4-free_list: a function that free a linked list.
 
 ### Environment
 - Language: C

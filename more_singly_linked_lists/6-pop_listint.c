@@ -2,7 +2,7 @@
 
 /**
  * pop_listint - deletes a element on a list
- * @head - pointer to head
+ * @head: pointer to head
  * Return: element_delete->'n'
  */
 int pop_listint(listint_t **head)

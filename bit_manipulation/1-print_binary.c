@@ -9,13 +9,13 @@ void print_binary(unsigned long int n)
 {
 	int flag, mask;
 
-	if(n == 0)
+	if (n == 0)
 		_putchar('0');
 	/*mask is (#bytes x #bits)-1*/
 	mask = (sizeof(n) * 8) - 1;
 	/*flag is for detect the first 1*/
 	flag = 0;
-	for (;mask >= 0;mask--)
+	for (; mask >= 0 ; mask--)
 	{
 		if ((n >> mask) & 1)
 			flag = 1;

@@ -1,7 +1,7 @@
 # C - Bit manipulation
 Bit manipulation is the act of algorithmically manipulating bits or other pieces of data shorter than a byte. C language is very efficient in manipulating bits.
 
-<p align="center"><img src="https://4.bp.blogspot.com/-aXbu3-_HBHY/V6lK1m8-2MI/AAAAAAAAAeg/_77cl30rs1wCyUMA8C1YDfhCHxrLJFnZACLcB/s320/bitwise-operators-chart.jpg"></p>
+<p align="center"><img src="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/232/bitwise.PNG"></p>
 
 # Resources
 - <a href="https://www.tutorialspoint.com/ansi_c/c_bits_manipulation.htm" target="_blank"> Bit manipulation, bitwise operators and bit fields </a>

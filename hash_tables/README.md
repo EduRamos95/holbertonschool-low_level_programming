@@ -1,2 +1,2 @@
-# C - HAST TABLES
+# C - HASH TABLES
 ---
